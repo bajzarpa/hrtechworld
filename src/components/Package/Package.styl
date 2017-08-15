@@ -1,0 +1,71 @@
+@import '../../helpers'
+
+.package
+  background: #f8f8f8
+  box-shadow: 0 3px 10px rgba(#333333, .25)
+  margin-right: 15px
+  padding: 15px
+  flex-grow: 1
+  flex-basis: 0
+
+  for i in 1 .. 4
+    &:nth-child({i})
+      .toggle-area
+        transition-delay unit(i*100, 'ms')
+
+  &:nth-child(4)
+    margin-right: 0
+
+  // Handling collapse
+  &.open
+    .toggle-area
+      max-height: 300px
+
+  h3
+    font-size: toVw(20px)
+    color: #18a8e1
+    margin-bottom: 25px
+    margin-top: 0
+    text-transform: uppercase
+    text-align: center
+    font-weight: 900
+
+    small
+      color: #ff0033
+      display: block
+      font-weight: normal
+
+  .price
+    text-align: center
+    font-weight: 900
+    font-size: 60px
+    margin-bottom: 25px
+    color: #18a8e1
+
+  .description
+    color: #999999
+    text-align: center
+    font-size: 14px
+    font-weight: 300
+
+  .until
+    font-size: 18px
+    text-align: center
+    color: #18a8e1
+    margin-bottom: 30px
+
+  .promo-input
+    input
+      width: 100%
+      margin-top: 5px
+      padding: 5px
+      font-style: italic
+      color: #999999
+      box-shadow: 0 0 3px 0 rgba(black, .2) inset
+      border: 0
+
+  .toggle-area
+    max-height: 0
+    overflow: hidden
+    transition: all .5s ease
+    will-change: auto
