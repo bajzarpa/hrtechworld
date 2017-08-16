@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - "8.2.1"
 
-skip_cleanup: true
+skip_cleanup: false
 
 install:
   - npm i -g yarn && yarn
