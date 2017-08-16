@@ -12,9 +12,3 @@ script:
 
 after_success:
   - firebase deploy --token $FIREBASE_TOKEN
-
-#deploy:
-#  skip_cleanup: false
-#  provider: firebase
-#  token:
-#    secure: "pLmhhU42L7fmKmlXhNXCDHJqjGuxJKjXUmsBuwKYnF+aaRnOIbi2T3lsHtaKRSZSdKi6feV08Tvq8sNJy2xuQ6pzgDhdCnkmPCbcvtBEWhyxE3Zt/NCIATlyRSixs5+0lG4AHtt+v9Aq9e73Eqawu5npFg3q12NWOVh+PZePv0SZwiipAFaFHF8ywidEtjGxwkOhoGYryJ8lj300640EQDzPZsDo69lQGwFkh+/SyPmpcKtGVWHbMze8hl9uB0b16/K9DZCxn1A4byrVtJ6paeLhXbezbxyBot303tSVCV7KaoYd2yj8VK5KGJPZanr2Bn/z3qmt3IPKUJRGIKrDF6AukHAT99PaT7dIkHYMafnZD6WUuhplSAiOxL3TjpjGtALCRoGjMWWv02DpB8+cFqvAC76XVKeR+BRKKLw63GSJx0UfAwV0DIOb5MqwMtEdhZZ++MuQxTg2K+4cHuD1iofUXgbWpC9/8sNS9tWRKAX6hRpchRoW6FuZjqcyULGFsuijYdNPaDco7isDVdppgosKE3QbbVcgh7p14HwYvMj5eYvMAuMt4+WoY5sq8JkiILBcE/mF35CFj2NKfw0x0LQJipgekIsAH5U8ms8VxM9BOmUqFY4kPXlUY6aIJREkUj2/I3W4ezDk0JCYrAa4XiUm0OrshChFiSdB4nfn2kk="
