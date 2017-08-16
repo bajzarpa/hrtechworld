@@ -20,4 +20,5 @@ export default props =>
         {props.content.benefits.map((item, index) => <li key={index}>{item}</li>)}
       </ul>
     </div>
+    <button>Book now</button>
   </div>

@@ -57,3 +57,5 @@ export const packageOptions = [
     benefits
   }
 ];
+
+export const partnersContent = new Array(5).fill({ image: require('./images/logo-workday.png'), url: '#' });
