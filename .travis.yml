@@ -1,8 +1,7 @@
+dist: precise
 language: node_js
 node_js:
   - "8.2.1"
-
-skip_cleanup: false
 
 install:
   - npm i -g yarn && yarn
@@ -11,6 +10,7 @@ before_deploy:
   - yarn run build
 
 deploy:
+  skip_cleanup: false
   provider: firebase
   project: "hrtechworld-9829a"
   token:
