@@ -1,8 +1,9 @@
 import React from 'react'
 import './Package.styl'
 
-const setPackageClass = props =>
-  props.content.popular ? (props.open ? 'package popular open' : 'package popular') : props.open ? 'package open' : 'package';
+const setPackageClass = props => props.content.popular ?
+  (props.open ? 'package popular open' : 'package popular') :
+    (props.open ? 'package open' : 'package');
 
 export default props =>
   <div className={setPackageClass(props)}>
