@@ -1,4 +1,5 @@
 @import '../../helpers'
+@import '~rupture/rupture/index.styl'
 
 .package
   background: #f8f8f8
@@ -8,6 +9,15 @@
   flex-grow: 1
   flex-basis: 0
   position: relative
+
+  +between(320px, 640px)
+    margin-right: 0
+    margin-bottom: 25px
+
+  +between(641px, 768px)
+    width: 48%
+    flex-basis: auto
+    margin-bottom: 15px
 
   // When a package is popular that have different sizes, and colors, all exceptions below here
   &.popular
@@ -36,22 +46,35 @@
       .toggle-area
         transition-delay unit(i*100, 'ms')
 
+        +between(320px, 768px)
+          transition-delay: 0ms
+
+  +between(641px, 768px)
+    &:nth-child(2)
+      margin-right: 0
+
   &:nth-child(4)
     margin-right: 0
 
   // Handling collapse
   &.open
     .toggle-area
-      max-height: 300px
+      max-height: 400px
 
   h3
-    font-size: toVw(20px)
+    font-size: 20px
     color: #18a8e1
     margin-bottom: 25px
     margin-top: 0
     text-transform: uppercase
     text-align: center
     font-weight: 900
+
+    +between(1024px, 1170px)
+      font-size: 15px
+
+    +between(641px, 768px)
+      font-size: 20px
 
     small
       color: #ff0033
@@ -103,11 +126,18 @@
       list-style: none
       margin-bottom: 95px
 
+      +between(320px, 640px)
+        margin-left: 15px
+        margin-bottom: 40px
+
       li
         margin-bottom: 25px
         display: flex
         font-size: 15px
         color: #2c292a
+
+        +between(320px, 640px)
+          margin-bottom: 15px
 
         &:before
           content: "•"

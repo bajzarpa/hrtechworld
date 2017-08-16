@@ -1,3 +1,5 @@
+@import '~rupture/rupture/index.styl'
+
 .partners
   text-align: center
   margin-top: 145px
@@ -18,8 +20,16 @@
     justify-content: center
     align-items: center
 
+    +between(320px, 640px)
+      flex-wrap: wrap
+      justify-content: space-around
+
     li
       margin-right: 35px
+
+      +between(320px, 640px)
+        margin-right: 0
+        margin-bottom: 25px
 
       &:last-of-type
         margin-right: 0

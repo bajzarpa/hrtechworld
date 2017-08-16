@@ -1,5 +1,10 @@
+@import '~rupture/rupture/index.styl'
+
 .timeline
   margin: 70px 0 65px 0
+
+  +between(320px, 640px)
+    margin: 30px 0
 
   ul
     display: flex
@@ -8,6 +13,10 @@
     padding: 0
     justify-content: center
     align-items: center
+    width: 100%
+
+    +between(320px, 640px)
+      flex-direction: column
 
     li
       // Exceptions & overrides
@@ -23,14 +32,28 @@
           font-weight: 600
           padding: 0 25px
 
+          +between(320px, 640px)
+            margin: 15px 0
+
           &:after
           &:before
             font-size: 25px
+            top: 50%
+            transform: translate(0, -50%)
+
+            +between(641px, 768px)
+              font-size: 18px
+
+            +between(320px, 640px)
+              content: none
 
           &:before
             position: absolute
             content: '/'
             right: 0
+
+            +between(320px, 640px)
+              content: none
 
       // Common rules
       a
@@ -45,9 +68,16 @@
         padding: 0 15px
         position: relative
 
+        +between(641px, 768px)
+          font-size: 14px
+          padding: 0 10px
+
         &:after
           content: '/'
           position: absolute
+
+          +between(320px, 640px)
+            content: none
 
         &:after
           left: 0

@@ -1,3 +1,5 @@
+@import '~rupture/rupture/index.styl'
+
 .textbox
   max-width: 33vw
   text-align: center
@@ -5,3 +7,9 @@
   line-height: 26px
   font-size: 14px
   color: #2c292a
+
+  +between(641px, 768px)
+    max-width: 70vw
+
+  +between(320px, 640px)
+    display: none
