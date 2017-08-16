@@ -1,8 +1,11 @@
 import React from 'react'
 import './Package.styl'
 
+const setPackageClass = props =>
+  props.content.popular ? (props.open ? 'package popular open' : 'package popular') : props.open ? 'package open' : 'package';
+
 export default props =>
-  <div className={props.open ? 'package open': 'package'}>
+  <div className={setPackageClass(props)}>
     <h3>
       {props.content.popular && <small>Most popular</small>}
       {props.content.name}
