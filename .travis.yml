@@ -7,7 +7,7 @@ skip_cleanup: true
 install:
   - npm i -g yarn && yarn
 
-before_script:
+before_deploy:
   - yarn run build
 
 deploy:
