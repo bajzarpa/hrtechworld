@@ -1,3 +1,6 @@
+@import '~rupture/rupture/index'
+@import '../../helpers'
+
 footer
   margin-top: 80px
   background: #2c292a
@@ -5,6 +8,10 @@ footer
   display: flex
   justify-content: center
   align-items: center
+
+  +above(1920px)
+    margin-top: toVw(80px)
+    padding: toVw(35px) 0 toVw(20px) 0
 
   img
     max-width: 100%

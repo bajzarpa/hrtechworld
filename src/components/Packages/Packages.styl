@@ -1,5 +1,5 @@
+@import '~rupture/rupture/index'
 @import '../../helpers'
-@import '~rupture/rupture/index.styl'
 
 .packages-container
   display: flex
@@ -9,16 +9,16 @@
   max-width: 80vw
   margin: toVw(60px) auto 0 auto
 
-  +between(320px, 640px)
-    flex-direction: column
-    margin: 60px auto
+  +between(1024px, 1170px)
+    max-width: 90vw
 
   +between(641px, 768px)
     justify-content: flex-end
     align-items: flex-end
 
-  +between(1024px, 1170px)
-    max-width: 90vw
+  +between(320px, 640px)
+    flex-direction: column
+    margin: 60px auto
 
   .button-wrapper
     display: flex
@@ -32,7 +32,7 @@
 
     button
       background: transparent
-      color: #18a8e1
+      color: $brandBlue
       border: 1px solid
       border-radius: 0
       font-weight: bold
@@ -42,6 +42,10 @@
       transition: all .2s ease
       will-change: auto
 
+      +above(1920px)
+        font-size: toVw(14px)
+        padding: toVw(15px) toVw(35px)
+
       &:hover
-        background: #18a8e1
+        background: $brandBlue
         color: #ffffff

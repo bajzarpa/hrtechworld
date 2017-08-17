@@ -1,4 +1,5 @@
-@import '~rupture/rupture/index.styl'
+@import '~rupture/rupture/index'
+@import '../../helpers'
 
 .textbox
   max-width: 33vw
@@ -7,6 +8,10 @@
   line-height: 26px
   font-size: 14px
   color: #2c292a
+
+  +above(1920px)
+    font-size: toVw(14px)
+    line-height: toVw(26px)
 
   +between(641px, 768px)
     max-width: 70vw

@@ -1,7 +1,11 @@
-@import '~rupture/rupture/index.styl'
+@import '~rupture/rupture/index'
+@import '../../helpers'
 
 .timeline
   margin: 70px 0 65px 0
+
+  +above(1920px)
+    margin: toVw(70px) 0 toVw(65px) 0
 
   +between(320px, 640px)
     margin: 30px 0
@@ -28,9 +32,12 @@
 
       &.hilight
         a
-          color: #18a8e1
+          color: $brandBlue
           font-weight: 600
           padding: 0 25px
+
+          +above(1920px)
+            padding: 0 toVw(25px)
 
           +between(320px, 640px)
             margin: 15px 0
@@ -40,6 +47,9 @@
             font-size: 25px
             top: 50%
             transform: translate(0, -50%)
+
+            +above(1920px)
+              font-size: toVw(25px)
 
             +between(641px, 768px)
               font-size: 18px
@@ -62,11 +72,15 @@
         align-items: center
         text-decoration: none
         text-transform: uppercase
-        color: #bee6f2
+        color: $timelineLinkColor
         font-weight: 300
         font-size: 18px
         padding: 0 15px
         position: relative
+
+        +above(1920px)
+          padding: 0 toVw(15px)
+          font-size: toVw(18px)
 
         +between(641px, 768px)
           font-size: 14px
@@ -85,9 +99,16 @@
         img
           margin-left: 10px
 
+          +above(1920px)
+            margin-left: toVw(10px)
+
         small
           font-weight: bold
           color: #ffffff
-          background: #bee6f2
+          background: $timelineLinkColor
           padding: 3px
           margin-left: 5px
+
+          +above(1920px)
+            padding: toVw(3px)
+            margin-left: toVw(5px)

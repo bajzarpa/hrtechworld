@@ -1,8 +1,12 @@
-@import '~rupture/rupture/index.styl'
+@import '~rupture/rupture/index'
+@import '../../helpers'
 
 .App-header
   background: #000000
   padding: 18px 28px
+
+  +above(1920px)
+    padding: toVw(18px) toVw(28px)
 
   +between(320px, 640px)
     img

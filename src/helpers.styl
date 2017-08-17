@@ -1,3 +1,13 @@
+$brandBlue         = #18a8e1
+$vividRed          = #f03
+$boxGrey           = #f8f8f8
+$timelineLinkColor = #bee6f2
+
+/**
+ * Convert a pixel to viewport
+ * The reference unit is 1920px since the PSD was designed in that size
+ * so everything above 1920px converted to vw unit
+ */
 toVw(value) {
   u = unit(value);
   if (u is 'px') {

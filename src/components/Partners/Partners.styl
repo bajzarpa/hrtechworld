@@ -1,8 +1,12 @@
-@import '~rupture/rupture/index.styl'
+@import '~rupture/rupture/index'
+@import '../../helpers'
 
 .partners
   text-align: center
   margin-top: 145px
+
+  +above(1920px)
+    margin-top: toVw(145px)
 
   h4
     text-transform: uppercase
@@ -11,6 +15,10 @@
     margin-bottom: 45px
     color: #cccccc
     font-size: 18px
+
+    +above(1920px)
+      font-size: toVw(18px)
+      margin-bottom: toVw(45px)
 
   ul
     margin: 0
@@ -26,6 +34,9 @@
 
     li
       margin-right: 35px
+
+      +above(1920px)
+        margin-right: toVw(35px)
 
       +between(320px, 640px)
         margin-right: 0

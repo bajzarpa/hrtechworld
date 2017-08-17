@@ -1,10 +1,11 @@
-@import '~rupture/rupture/index.styl'
+@import '~rupture/rupture/index'
+@import '../../helpers'
 
 .ticket-selector
   display: flex
   justify-content: center
   align-items: center
-  background: #f8f8f8
+  background: $boxGrey
   box-shadow: 0 0 8px rgba(#333333, .3)
 
   ul
@@ -18,7 +19,7 @@
     li
       &.active
         a
-          color: #18a8e1
+          color: $brandBlue
           font-weight: bold
 
           &:after
@@ -31,17 +32,21 @@
             position: absolute
             pointer-events: none
             border-color: rgba(136, 183, 213, 0)
-            border-top-color: #f8f8f8
+            border-top-color: $boxGrey
             border-width: 15px
             margin-left: -15px
             transform-origin: 0 0
             transform: rotate(-45deg)
             box-shadow: -2px 3px 3px 0px rgba(#333333 ,0.1)
-            background: #f8f8f8
+            background: $boxGrey
 
             +between(320px, 640px)
               border-width: 10px
               margin-left: -10px
+
+            +above(1920px)
+              border-width: toVw(15px)
+              margin-left: toVw(-15px)
 
 
       &:not(.active)
@@ -61,6 +66,10 @@
         transition: all .5s ease
         will-change: auto
 
+        +above(1920px)
+          padding: toVw(35px) toVw(45px)
+          font-size: toVw(18px)
+
         +between(320px, 640px)
           flex-direction: column
           justify-content: center
@@ -74,6 +83,9 @@
 
         img
           margin-right: 5px
+          
+          +above(1920px)
+            margin-right: toVw(5px)
 
           +between(320px, 640px)
             margin-right: 0
